@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Muliplacation {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int result = 0;
+
+        while (b != 0) {
+            if ((b & 1) == 1) {
+                result += a;
+            }
+            b >>= 1;
+            a <<= 1;
+        }
+        System.out.println(result);
+    }
+}
